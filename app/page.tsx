@@ -1,5 +1,19 @@
 "use client";
 import AdUnit from "@/components/AdUnit"
+
+import Script from "next/script"
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "단위 변환기 (Unit Converter)",
+  url: "https://unit.moneystom7.com",
+  description: "길이·무게·온도 등 모든 단위를 빠르게 변환하는 무료 계산기",
+  applicationCategory: "UtilityApplication",
+  operatingSystem: "Any",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
+  inLanguage: ["ko", "en"],
+}
 import { useState } from "react";
 
 const tempConvert = (v: number, from: string, to: string): number => {
