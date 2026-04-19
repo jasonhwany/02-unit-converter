@@ -10,13 +10,11 @@ export const metadata: Metadata = {
     default: "단위 변환기 — MoneyStom7",
     template: "%s | MoneyStom7",
   },
-  description: "길이·무게·온도·넓이·부피 단위를 빠르게 변환. 무료 온라인 단위 변환 계산기. Free online unit converter. Convert length, weight, temperature, area, volume and more instantly.",
-  keywords: ["단위 변환기", "Unit Converter", "무료", "온라인", "계산기", "length converter", "weight converter", "temperature converter", "unit conversion"],
-  authors: [{ name: "MoneyStom7" }],
+  description: "길이·무게·온도·넓이·부피 단위를 빠르게 변환. 무료 온라인 단위 변환 계산기. Free online unit converter.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "단위 변환기 — MoneyStom7",
-    description: "길이·무게·온도·넓이·부피 단위를 빠르게 변환. 무료 온라인 단위 변환 계산기.",
+    description: "길이·무게·온도·넓이·부피 단위를 빠르게 변환. 무료 온라인 단위 변환 계산기. Free online unit converter.",
     url: BASE_URL,
     siteName: "MoneyStom7",
     locale: "ko_KR",
@@ -25,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "단위 변환기 — MoneyStom7",
-    description: "길이·무게·온도·넓이·부피 단위를 빠르게 변환. 무료 온라인 단위 변환 계산기.",
+    description: "길이·무게·온도·넓이·부피 단위를 빠르게 변환. 무료 온라인 단위 변환 계산기. Free online unit converter.",
   },
   robots: {
     index: true,
@@ -39,6 +37,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ko">
       <body>
         {children}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-GN51TN6PS4"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-GN51TN6PS4');
+          `}
+        </Script>
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8414331859152952"
